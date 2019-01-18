@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Insta photo download launcher",
+    "description": "Insta photo download launcher",
+    "version": "1.0",
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "https://www.instagram.com/p/*" ],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Открыть скачиватель",
+        "default_icon": "img/icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "https://www.instagram.com/p/*"
+    ]
+}
